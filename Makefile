@@ -128,8 +128,11 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
 # details:
 # http://www.gnu.org/software/make/manual/html_node/Chained-Rules.html
 .PRECIOUS: %.o
-
+#ctrl o, enter ctrl x -remember
 UPROGS=\
+	$U/_sleep\
+	$U/_matmul\
+        $U/_time1\
 	$U/_uptime\
 	$U/_cat\
 	$U/_echo\
