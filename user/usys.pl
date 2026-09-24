@@ -24,6 +24,7 @@ sub entry {
 entry("fork");
 entry("exit");
 entry("wait");
+entry("wait2"); #System call stub for wait2
 entry("pipe");
 entry("read");
 entry("write");

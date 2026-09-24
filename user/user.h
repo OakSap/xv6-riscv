@@ -1,11 +1,14 @@
 #define SBRK_ERROR ((char *)-1)
 
 struct stat;
+struct rusage;  // Forward declaration for process resource usage
 
 // system calls
 int fork(void);
 int exit(int) __attribute__((noreturn));
 int wait(int *);
+int wait2(int*, struct rusage*);  // Wait for a child and return its resource usage
+
 int pipe(int *);
 int write(int, const void *, int);
 int read(int, void *, int);

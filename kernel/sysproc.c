@@ -36,6 +36,20 @@ sys_wait(void)
   return kwait(p);
 }
 
+// Wait for a child and return its status and resource usage.
+uint64
+sys_wait2(void)
+{
+  uint64 status;
+  uint64 rusage;
+
+  argaddr(0, &status);
+  argaddr(1, &rusage);
+
+  return kwait2(status, rusage);
+}
+
+
 uint64
 sys_sbrk(void)
 {

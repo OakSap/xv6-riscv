@@ -98,6 +98,9 @@ void            sleep_prepare(void*);
 void            sleep(void);
 void            userinit(void);
 int             kwait(uint64);
+
+int             kwait2(uint64, uint64); //Wait for child and return resource usage
+
 void            wakeup(void*);
 void            yield(void);
 int             either_copyout(int user_dst, uint64 dst, void *src, uint64 len);
